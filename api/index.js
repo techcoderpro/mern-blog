@@ -22,6 +22,9 @@ app.listen(3000, () => {
   console.log('Server is running on port 3000');
 })
 
+app.get('test/', (req, res) => {
+  res.json({message:'Api is working!'});
+})
 app.use('/api/user', userRoutes);
-app.use('/api/auth', authRoutes);
+//app.use('/api/auth', authRoutes);
 
